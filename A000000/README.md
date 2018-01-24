@@ -11,7 +11,7 @@ Este es un manual donde se explican los pasos para:
 ## Pasos
 * Configurar interfaz de red como bridge en settings de VirtualBox.
 * Cambiar a root:
-  su
+    su
 * Configuración de interfaces de red:
   cd /etc/sysconfig/network-scripts/
   vi ifcfg-enp0s3 

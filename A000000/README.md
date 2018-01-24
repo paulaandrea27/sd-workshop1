@@ -10,17 +10,31 @@ Este es un manual donde se explican los pasos para:
 
 ## Pasos
 * Configurar interfaz de red como bridge en settings de VirtualBox.
+
+
 * Cambiar a root:
   
   su
   
   
 * Configuración de interfaces de red:
+
+
   cd /etc/sysconfig/network-scripts/
+  
+  
   vi ifcfg-enp0s3 
+  
+  
   ONBOOT=yes
+  
+  
 * Reiniciar interfaces de red:
+
+
   systemctl restart network.service
+  
+  
 * Ver ip:
   ip a
 * Actualizar e instalar las herramientas de red:

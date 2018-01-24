@@ -36,26 +36,64 @@ Este es un manual donde se explican los pasos para:
   
   
 * Ver ip:
+
+
   ip a
+  
+  
 * Actualizar e instalar las herramientas de red:
+
+
   yum update
+  
+  
   yum install net-tools
+  
+  
 * Habilitar el puerto 22 para conectarse por SSH:
+
+
   cd /etc/ssh/
+  
+  
   vi sshd_config 
+  
+  
 * Des-comentar la línea: Port 22
+
+
 * Reiniciar el servicio SSH:
+
+
   systemctl reload sshd
+  
+  
 * Confirmar que el puerto 22 está escuchando:
+
+
   netstat -lntu
+  
+  
 * Conectarse desde un cliente SSH a la dirección IP de la máquina por el puerto 22 al usuario1.
+
+
 * Cambiar a root:
+
+
   su
+  
+  
 * Instalar Apache:
+
+
   yum install httpd
+  
+  
 * Habilitar los puertos para que funcione el servidor web por medio del Firewall:
-  firewall-cmd --permanent --add-port=80/tcp
-  firewall-cmd --permanent --add-port=443/tcp
+
+
+  firewall-cmd --permanent --add-port=80/tcp. 
+  firewall-cmd --permanent --add-port=443/tcp
 * Reiniciar el Firewall:
   firewall-cmd --reload
 * Iniciar el servicio y hacer que se ejecute automáticamente cuando se inicia la máquina:

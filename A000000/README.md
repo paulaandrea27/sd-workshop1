@@ -92,16 +92,35 @@ Este es un manual donde se explican los pasos para:
 * Habilitar los puertos para que funcione el servidor web por medio del Firewall:
 
 
-  firewall-cmd --permanent --add-port=80/tcp. 
+  firewall-cmd --permanent --add-port=80/tcp
+  
+  
   firewall-cmd --permanent --add-port=443/tcp
+  
+  
 * Reiniciar el Firewall:
+
+
   firewall-cmd --reload
+  
+  
 * Iniciar el servicio y hacer que se ejecute automáticamente cuando se inicia la máquina:
+
+
   systemctl start httpd
+  
+  
   systemctl enable httpd
+  
+  
 * Confirmar que el servicio está arriba y el puerto 80 está escuchando:
+
+
   systemctl status httpd
+  
+  
   netstat -lntu
+
 
 ## Referencias:
 * http://www.grupotelfor.com/blog/7-centos-7/8-configurar-las-interfaces-de-red-en-centos-7 
